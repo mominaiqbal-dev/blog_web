@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(
-    ['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'admin.'],
+    ['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'],
     function () {
         // Route::get('/', function () {
         //     return view('admin.index');

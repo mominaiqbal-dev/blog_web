@@ -120,7 +120,9 @@
                             <a href="#" style="text-decoration: none; color:black">user list</a>
                         </li>
                         <li>
-                            <a href="#" style="text-decoration: none; color:black">Contact list</a>
+                            <a href="{{ route('admin.contacts.index') }}"
+                                style="text-decoration: none; color:black">Contact
+                                list</a>
                         </li>
 
                     </ul>
