@@ -24,7 +24,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        dd('contact index');
+        return view('admin.contacts.create');
     }
 
     /**
@@ -32,16 +32,22 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->subject = $request->subject;
+        $contact->details = $request->details;
+        $contact->save();
+
+        // return redirect()->back()->with('sussess', 'your message has been sent successfully');
+        return redirect()->route('admin.contacts.index')->with('sussess', 'your message has been sent successfully');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
+    public function show(string $id) {}
 
     /**
      * Show the form for editing the specified resource.
