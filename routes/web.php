@@ -20,3 +20,4 @@ Route::get('/about-us', [App\Http\Controllers\FrontController::class, 'aboutUs']
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('/service', [FrontController::class, 'service'])->name('service');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+include('admin.php');
