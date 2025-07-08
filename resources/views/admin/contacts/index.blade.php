@@ -7,6 +7,10 @@
 
 
 
+            <div>
+                <a href="{{ route('admin.contacts.create') }}"> create</a>
+            </div>
+
             <table>
                 <thead>
                     <td>
