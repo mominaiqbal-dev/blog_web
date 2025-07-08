@@ -23,6 +23,10 @@
 
 
 
-        
+
+
+
+
+        {{-- new section --}}
     </div>
 @endsection
