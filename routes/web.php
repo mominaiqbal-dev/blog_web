@@ -5,13 +5,13 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactController;
 
 
-// Route::get('/', function () {
-//     return view('front.index');
-// });
-
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('front.index');
+});
+
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('welcome');
 
 Auth::routes();
 
