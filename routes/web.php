@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactController;
-
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('front.index');
@@ -12,6 +12,9 @@ Route::get('/', function () {
 // Route::get('/', function () {
 //     return view('welcome');
 // })->name('welcome');
+
+Route::resource('product', ProductController::class);
+
 
 Auth::routes();
 
