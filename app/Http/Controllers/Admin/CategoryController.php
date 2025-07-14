@@ -18,9 +18,11 @@ class CategoryController extends Controller
         $categories = Category::get();
         // $categories = Category::limit(10)->get();
         // $categories = Category::pagenate(10);
+        $abc = 'hello';
 
 
-        return view('admin.categories.index', compact('categories'));
+        // return view('admin.categories.index' ,data:['categories' => $categories , 'abc' => $abc]);
+        return view('admin.categories.index', compact('categories', 'abc'));
     }
 
     /**
@@ -77,26 +79,45 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
 
-        dd('welcome');
-        return view('admin.categories.edit');
+        // dd('welcome edit');
+        $category = Category::findOrFail($id);
+
+        $categories = Category::all();
+
+        return view('admin.categories.edit', compact('category', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+
+        // dd($request->all());
+        return redirect()->route('admin.categories.index')->with('error', 'Category not found.');
+
+        $category = Category::findOrFail($id);
+        $category->name = $request->name;
+        $category->slug = $request->slug;
+        $category->description = $request->description;
+        $category->parent_id = $request->parent_id;
+        $category->status = $request->status;
+        $category->save();
+        return redirect()->route('admin.categories.index')->with('success', 'Category updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+        // dd('welcome delte');
+
+        $category = Category::findOrFail($id);
+        $category->delete();
+        return redirect()->route('admin.categories.index')->with('success', 'Category delated successfully.');
     }
 }

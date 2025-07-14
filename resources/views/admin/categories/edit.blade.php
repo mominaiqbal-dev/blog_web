@@ -9,7 +9,7 @@
         <div class="card-body">
             <div class="table-responsive">
 
-                <form action="{{ route('categories.update', $category->id) }}" method="POST">
+                <form action="{{ route('admin.categories.update', $category->id) }}" method="POST">
                     @csrf
                     @method('PUT')
 
@@ -32,7 +32,7 @@
 
                     <div class="mb-3">
                         <label for="parent_id" class="form-label">Parent Category</label>
-                        <select class="form-select" name="parent_id" id="parent_id">
+                        <select class="form-select form-control" name="parent_id" id="parent_id">
                             <option value="">-- None --</option>
                             @foreach ($categories as $cat)
                                 <option value="{{ $cat->id }}"
@@ -45,7 +45,7 @@
 
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
-                        <select class="form-select" name="status" id="status" required>
+                        <select class="form-select form-control" name="status" id="status" required>
                             <option value="active" {{ $category->status == 'active' ? 'selected' : '' }}>Active</option>
                             <option value="inactive" {{ $category->status == 'inactive' ? 'selected' : '' }}>Inactive
                             </option>

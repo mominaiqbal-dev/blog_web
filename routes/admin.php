@@ -36,13 +36,15 @@ Route::group(
         // admin.categories.destroy
 
         Route::resource('categories', CategoryController::class)->names('categories');
-        // Route::get('/test', [UserController::class, 'abc'])->name('users.jawad');
+        // Route::get('/categories', [UserController::class, 'index'])->name('categories.index');
+
         // Route::post('/user-store', [UserController::class, 'store'])->name('users.store');
+
         // Route::get('/user-edit/{id}', [UserController::class, 'edit'])->name('users.edit');
         // Route::put('/user-list/{id}', [UserController::class, 'update'])->name('users.update');
         // Route::get('/user-list', [UserController::class, 'create'])->name('users.create');
         // Route::DELETE('/user-list/{id}', [UserController::class, 'destroy'])->name('users.destroy');
-        // Route::get('/user-show/{id}', [UserController::class, 'show'])->name('users.show');
+        // Route::get('/user-show/{id} ', [UserController::class, 'show'])->name('users.show');
 
     }
 
