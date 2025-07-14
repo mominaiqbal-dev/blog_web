@@ -13,5 +13,3 @@ class ProjectController extends Controller
         return view('admin.projects.index', compact('projects'));
     }
 }
-
-// neww
