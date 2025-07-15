@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Dom\Comment;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,8 +45,9 @@ Route::group(
         // Route::get('/user-show/{id} ', [UserController::class, 'show'])->name('users.show');
 
         Route::resource('employees', EmployeeController::class)->names('employees');
-
-
+        Route::resource('products', ProductController::class)->names('product');
+        Route::resource('posts', PostController::class)->names('posts');
+        Route::resource('comments', CommentController::class)->names('comments');
     }
 
 );
