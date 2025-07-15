@@ -5,9 +5,13 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 
+Route::get('/dashboard', function () {
+    //return view('front.index');
+    return view('admin.dashboard');
+  })->name('dashboard');
 Route::get('/', function () {
     return view('front.index');
-});
+})->name('index');
 
 // Route::get('/', function () {
 //     return view('welcome');

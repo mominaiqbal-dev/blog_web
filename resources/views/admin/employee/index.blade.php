@@ -1,11 +1,10 @@
 @extends('admin.layouts.master')
 
 @section('content')
-{{--new project--}}
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex" style="justify-content:space-between">
-            <h6 class="m-0 font-weight-bold text-primary">Categories Listing</h6>
-            <a href="{{ route('admin.categories.create') }}" class="btn btn-success"> create </a>
+            <h6 class="m-0 font-weight-bold text-primary">Employees Record</h6>
+            <a href="{{ route('admin.employees.create') }}" class="btn btn-success"> Add Employee </a>
         </div>
         {{-- @dd('hello') --}}
         <div class="card-body">
@@ -14,9 +13,10 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Slug</th>
-                            <th>Decription</th>
-                            <th>Status</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Designation</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -24,20 +24,21 @@
 
 
 
-                        @foreach ($categories as $data)
+                        @foreach ($employee as $data)
                             {{-- @dd($data) --}}
                             <tr>
                                 <td>{{ $data->name }}</td>
-                                <td>{{ $data->slug }}</td>
-                                <td>{{ $data->description }}</td>
-                                <td>{{ $data->status }}</td>
+                                <td>{{ $data->email }}</td>
+                                <td>{{ $data->phone }}</td>
+                                <td>{{ $data->address }}</td>
+                                <td>{{ $data->designation }}</td>
                                 <td>
                                     {{-- edit --}}
-                                    <a href="{{ route('admin.categories.edit', $data->id) }}" class="btn btn-info">
+                                    <a href="{{ route('admin.employees.edit', $data->id) }}" class="btn btn-info">
                                         Edit
                                     </a>
                                     {{-- for delete  --}}
-                                    <form action="{{ route('admin.categories.destroy', $data->id) }}" method="POST">
+                                    <form action="{{ route('admin.employees.destroy', $data->id) }}" method="POST">
                                         @csrf
                                         @method('Delete')
 
