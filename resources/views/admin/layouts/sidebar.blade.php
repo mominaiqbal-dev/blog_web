@@ -34,8 +34,12 @@
             <i class="fas fa-fw fa-cog"></i>
             <span>Category</span></a>
     </li>
-<<<<<<< Updated upstream
-=======
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.employees.index') }}">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Employee</span></a>
+    </li>
+
     {{--new--}}
     <li class="nav-item">
     <a class="nav-link" href="{{ route('product.index') }}">
@@ -43,13 +47,6 @@
         <span>Products</span>
     </a>
 </li>
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-
-=======
-{{--new--}}
->>>>>>> Stashed changes
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
