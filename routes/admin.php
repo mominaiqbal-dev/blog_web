@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\EmployeeController;
 // use App\Http\Controllers\Admin\UserController;
 
 
@@ -25,5 +25,32 @@ Route::group(
         //users.update
         //users.destroy
         Route::resource('contacts', ContactController::class);
+<<<<<<< Updated upstream
+=======
+
+
+        // admin.categories.index
+        // admin.categories.create
+        // admin.categories.store
+        // admin.categories.edit
+        // admin.categories.update
+        // admin.categories.show
+        // admin.categories.destroy
+
+        Route::resource('categories', CategoryController::class)->names('categories');
+        // Route::get('/categories', [UserController::class, 'index'])->name('categories.index');
+
+        // Route::post('/user-store', [UserController::class, 'store'])->name('users.store');
+
+        // Route::get('/user-edit/{id}', [UserController::class, 'edit'])->name('users.edit');
+        // Route::put('/user-list/{id}', [UserController::class, 'update'])->name('users.update');
+        // Route::get('/user-list', [UserController::class, 'create'])->name('users.create');
+        // Route::DELETE('/user-list/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+        // Route::get('/user-show/{id} ', [UserController::class, 'show'])->name('users.show');
+
+        Route::resource('employees', EmployeeController::class)->names('employees');
+
+
+>>>>>>> Stashed changes
     }
 );

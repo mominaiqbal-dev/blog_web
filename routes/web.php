@@ -5,6 +5,14 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactController;
 
 
+<<<<<<< Updated upstream
+=======
+Route::get('/', function () {
+    //return view('front.index');
+    return view('admin.dashboard');
+});
+
+>>>>>>> Stashed changes
 // Route::get('/', function () {
 //     return view('front.index');
 // });
