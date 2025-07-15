@@ -8,12 +8,12 @@ use App\Http\Controllers\ContactController;
 Route::get('/dashboard', function () {
     //return view('front.index');
     return view('admin.dashboard');
-  })->name('dashboard');
+})->name('dashboard');
 Route::get('/', function () {
     return view('front.index');
 })->name('index');
 
-// Route::get('/', function () {
+// Route::get('/welcome', function () {
 //     return view('welcome');
 // })->name('welcome');
 
@@ -24,4 +24,6 @@ Route::get('/about-us', [App\Http\Controllers\FrontController::class, 'aboutUs']
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('/service', [FrontController::class, 'service'])->name('service');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/welcome', [FrontController::class, 'welcome'])->name('welcome');
+Route::post('/save-comment', [FrontController::class, 'saveComment'])->name('front.save.comment');
 include('admin.php');
