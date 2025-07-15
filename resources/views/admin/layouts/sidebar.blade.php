@@ -34,6 +34,17 @@
             <i class="fas fa-fw fa-cog"></i>
             <span>Category</span></a>
     </li>
+<<<<<<< Updated upstream
+=======
+    {{--new--}}
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('product.index') }}">
+        <i class="fas fa-box"></i>
+        <span>Products</span>
+    </a>
+</li>
+
+>>>>>>> Stashed changes
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
