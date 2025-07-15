@@ -5,21 +5,17 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactController;
 
 
-<<<<<<< Updated upstream
-=======
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     //return view('front.index');
     return view('admin.dashboard');
-});
-
->>>>>>> Stashed changes
-// Route::get('/', function () {
-//     return view('front.index');
-// });
-
+  })->name('dashboard');
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('front.index');
+})->name('index');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('welcome');
 
 Auth::routes();
 

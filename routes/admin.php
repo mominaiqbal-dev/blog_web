@@ -3,9 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\EmployeeController;
-// use App\Http\Controllers\Admin\UserController;
-
 
 
 Route::group(
@@ -25,8 +22,6 @@ Route::group(
         //users.update
         //users.destroy
         Route::resource('contacts', ContactController::class);
-<<<<<<< Updated upstream
-=======
 
 
         // admin.categories.index
@@ -51,6 +46,6 @@ Route::group(
         Route::resource('employees', EmployeeController::class)->names('employees');
 
 
->>>>>>> Stashed changes
     }
+
 );
