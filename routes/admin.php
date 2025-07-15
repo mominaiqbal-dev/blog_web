@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\Admin\ContactController;
-// use App\Http\Controllers\Admin\UserController;
+ 
 
 
 
@@ -36,6 +36,7 @@ Route::group(
         // admin.categories.destroy
 
         Route::resource('categories', CategoryController::class)->names('categories');
+      
         // Route::get('/categories', [UserController::class, 'index'])->name('categories.index');
 
         // Route::post('/user-store', [UserController::class, 'store'])->name('users.store');
